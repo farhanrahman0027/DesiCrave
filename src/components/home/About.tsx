@@ -29,7 +29,7 @@ const About: React.FC = () => {
               A Culinary Journey Through India
             </h2>
             <p className="mb-6 text-gray-600">
-              Welcome to Indian Cafe, where we bring the diverse and rich culinary traditions of India to your table. Our restaurant is a celebration of authentic flavors, aromatic spices, and time-honored recipes that have been passed down through generations.
+              Welcome to DesiCrave, where we bring the diverse and rich culinary traditions of India to your table. Our restaurant is a celebration of authentic flavors, aromatic spices, and time-honored recipes that have been passed down through generations.
             </p>
             <p className="mb-6 text-gray-600">
               Our team of expert chefs, led by Master Chef Raj Kumar, craft each dish with passion and precision, ensuring an unforgettable dining experience that transports you straight to the heart of India.
