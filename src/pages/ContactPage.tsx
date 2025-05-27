@@ -92,7 +92,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="mb-1 text-lg font-medium">Our Location</h3>
-                    <p className="text-gray-600">123 Restaurant Street, Foodville, NY 10001</p>
+                    <p className="text-gray-600">123 Restaurant Street, Foodville, IND 53001</p>
                   </div>
                 </div>
                 
@@ -102,7 +102,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="mb-1 text-lg font-medium">Phone Number</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+91 (975) 123-4567</p>
                   </div>
                 </div>
                 
@@ -112,7 +112,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="mb-1 text-lg font-medium">Email Address</h3>
-                    <p className="text-gray-600">info@indiancafe.com</p>
+                    <p className="text-gray-600">info@DesiCrave.com</p>
                   </div>
                 </div>
                 
