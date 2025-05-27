@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-accent-400" />
-                <span>info@indiancafe.com</span>
+                <span>info@DesiCrave.com</span>
               </li>
             </ul>
           </div>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
       {/* Copyright */}
       <div className="py-6 text-center bg-primary-800">
         <p className="text-gray-300">
-          © {currentYear} Indian Cafe. All rights reserved.
+          © {currentYear} DesiCrave. All rights reserved.
         </p>
       </div>
     </footer>
