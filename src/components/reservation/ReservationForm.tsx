@@ -100,7 +100,7 @@ const ReservationForm: React.FC = () => {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="p-8 bg-white rounded-lg shadow-card">
+        <form onSubmit={handleSubmit} className="p-8 bg-gray-200 rounded-lg shadow-card ">
           <h3 className="mb-6 text-2xl font-semibold text-center">Reserve Your Table</h3>
           
           <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
@@ -120,7 +120,7 @@ const ReservationForm: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className={`form-input pl-10 ${errors.name ? 'border-red-500' : ''}`}
-                  placeholder="John Doe"
+                  placeholder="your name"
                 />
               </div>
               {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
@@ -142,7 +142,7 @@ const ReservationForm: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className={`form-input pl-10 ${errors.email ? 'border-red-500' : ''}`}
-                  placeholder="john@example.com"
+                  placeholder="youremail@gmail.com"
                 />
               </div>
               {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
