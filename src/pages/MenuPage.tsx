@@ -5,13 +5,13 @@ import { menuCategories } from '../data/menuData';
 const MenuPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('popular');
   const [favorites, setFavorites] = useState<number[]>([]);
-  
+
   // Get items for the active category
   const activeItems = menuCategories.find(category => category.id === activeCategory)?.items || [];
 
   const toggleFavorite = (itemId: number) => {
-    setFavorites(prev => 
-      prev.includes(itemId) 
+    setFavorites(prev =>
+      prev.includes(itemId)
         ? prev.filter(id => id !== itemId)
         : [...prev, itemId]
     );
@@ -39,11 +39,10 @@ const MenuPage: React.FC = () => {
             {menuCategories.map((category) => (
               <button
                 key={category.id}
-                className={`px-6 py-3 mb-2 text-sm font-medium rounded-full transition-colors ${
-                  activeCategory === category.id
-                    ? 'bg-primary-800 text-white'
-                    : 'bg-primary-50 text-primary-800 hover:bg-primary-100'
-                }`}
+                className={`px-6 py-3 mb-2 text-sm font-medium rounded-full transition-colors ${activeCategory === category.id
+                  ? 'bg-primary-800 text-white'
+                  : 'bg-primary-50 text-primary-800 hover:bg-primary-100'
+                  }`}
                 onClick={() => setActiveCategory(category.id)}
               >
                 {category.name}
@@ -62,10 +61,10 @@ const MenuPage: React.FC = () => {
                     alt={item.name}
                     className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                   />
-                  
+
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Top Badges */}
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
                     <div className="flex flex-col gap-2">
@@ -83,18 +82,17 @@ const MenuPage: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     {/* Favorite Button */}
                     <button
                       onClick={() => toggleFavorite(item.id)}
                       className="p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white transition-all duration-300 transform hover:scale-110"
                     >
-                      <Heart 
-                        className={`w-4 h-4 transition-colors ${
-                          favorites.includes(item.id) 
-                            ? 'text-red-500 fill-red-500' 
-                            : 'text-gray-600 hover:text-red-500'
-                        }`} 
+                      <Heart
+                        className={`w-4 h-4 transition-colors ${favorites.includes(item.id)
+                          ? 'text-red-500 fill-red-500'
+                          : 'text-gray-600 hover:text-red-500'
+                          }`}
                       />
                     </button>
                   </div>
@@ -127,7 +125,7 @@ const MenuPage: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Card Content */}
                 <div className="p-6 relative">
                   {/* Title and Description */}
@@ -151,7 +149,7 @@ const MenuPage: React.FC = () => {
                       Chef's special
                     </span>
                   </div>
-                  
+
                   {/* Price and Action */}
                   <div className="flex items-center justify-between">
                     <div className="flex flex-col">
@@ -162,27 +160,21 @@ const MenuPage: React.FC = () => {
                         per serving
                       </span>
                     </div>
-                    
+
                     <button className="group/btn relative overflow-hidden bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
                       <span className="relative z-10 flex items-center gap-2">
                         <Plus className="w-4 h-4 transition-transform group-hover/btn:rotate-90" />
                         Add to Order
                       </span>
-                      
+
                       {/* Button shine effect */}
                       <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
-                      
+
                       {/* Button slide effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
                     </button>
                   </div>
-
-                  {/* Hover overlay content */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-50/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none rounded-2xl"></div>
                 </div>
-
-                {/* Card border glow effect */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary-200 transition-all duration-300"></div>
               </div>
             ))}
           </div>
@@ -193,7 +185,7 @@ const MenuPage: React.FC = () => {
       <section className="py-16 bg-primary-50">
         <div className="container">
           <h2 className="mb-12 text-3xl font-semibold text-center md:text-4xl">Special Dietary Options</h2>
-          
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="p-8 text-center bg-white rounded-lg shadow-soft">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-green-600">
@@ -204,7 +196,7 @@ const MenuPage: React.FC = () => {
                 We offer a wide selection of delicious vegetarian dishes, crafted with fresh vegetables and aromatic spices.
               </p>
             </div>
-            
+
             <div className="p-8 text-center bg-white rounded-lg shadow-soft">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-blue-600">
                 <span className="text-2xl font-bold">GF</span>
@@ -214,7 +206,7 @@ const MenuPage: React.FC = () => {
                 Many of our dishes are naturally gluten-free. We can adapt most other dishes to accommodate gluten sensitivities.
               </p>
             </div>
-            
+
             <div className="p-8 text-center bg-white rounded-lg shadow-soft">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-white rounded-full bg-primary-600">
                 <span className="text-2xl font-bold">DF</span>

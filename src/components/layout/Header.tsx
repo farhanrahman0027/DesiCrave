@@ -71,7 +71,7 @@ const Header: React.FC = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/reservation" className="btn btn-primary">
+              <NavLink to="/reservation" className="btn btn-primary bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700">
                 Reserve a Table
               </NavLink>
             </li>
