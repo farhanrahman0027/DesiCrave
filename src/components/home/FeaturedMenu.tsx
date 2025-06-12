@@ -54,7 +54,7 @@ const FeaturedMenu: React.FC = () => {
               <p className="mb-4 text-sm text-gray-600 line-clamp-2">{item.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-lg font-semibold text-primary-800">${item.price.toFixed(2)}</span>
-                <button className="px-4 py-2 text-sm text-white transition-colors rounded-md bg-accent-600 hover:bg-accent-700">
+                <button className="px-4 py-2 text-sm text-white transition-colors rounded-md bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700">
                   Add to Order
                 </button>
               </div>

@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:justify-center gap-4">
         <Link
           to="/menu"
-          className="btn btn-accent text-center px-6 py-3 text-base font-semibold rounded-md shadow-md hover:scale-105 transition"
+          className="btn btn-accent text-center px-6 py-3 text-base font-semibold rounded-md shadow-md hover:scale-105 transition bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700"
         >
           Explore Our Menu
         </Link>
