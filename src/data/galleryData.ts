@@ -62,7 +62,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 10,
-    src: 'https://images.pexels.com/photos/7586028/pexels-photo-7586028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://www.mygingergarlickitchen.com/wp-content/uploads/2017/09/gulab-jamun-recipe-3.jpg',
     alt: 'Gulab Jamun dessert',
     category: 'food'
   },
