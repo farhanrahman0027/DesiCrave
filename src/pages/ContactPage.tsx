@@ -8,30 +8,30 @@ const ContactPage: React.FC = () => {
     subject: '',
     message: '',
   });
-  
+
   const [errors, setErrors] = useState({
     name: '',
     email: '',
     message: '',
   });
-  
+
   const [submitted, setSubmitted] = useState(false);
-  
+
   const validateForm = () => {
     const newErrors = {
       name: formData.name ? '' : 'Name is required',
       email: formData.email ? (
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) 
-          ? '' 
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+          ? ''
           : 'Please enter a valid email'
       ) : 'Email is required',
       message: formData.message ? '' : 'Message is required',
     };
-    
+
     setErrors(newErrors);
     return Object.values(newErrors).every(error => error === '');
   };
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -39,15 +39,15 @@ const ContactPage: React.FC = () => {
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       // In a real app, you would submit the form data to a server here
       console.log('Form submitted:', formData);
       setSubmitted(true);
-      
+
       // Reset form after submission
       setFormData({
         name: '',
@@ -84,7 +84,7 @@ const ContactPage: React.FC = () => {
                 Have questions or feedback? We'd love to hear from you. Fill out the form
                 or contact us directly using the information below.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-3 mr-4 text-white rounded-full bg-primary-600">
@@ -92,10 +92,10 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="mb-1 text-lg font-medium">Our Location</h3>
-                    <p className="text-gray-600">123 Restaurant Street, Foodville, IND 53001</p>
+                    <p className="text-gray-600">123 Restaurant Street, Foodville, IND 500032</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-3 mr-4 text-white rounded-full bg-primary-600">
                     <Phone size={24} />
@@ -105,7 +105,7 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-600">+91 (975) 123-4567</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-3 mr-4 text-white rounded-full bg-primary-600">
                     <Mail size={24} />
@@ -115,7 +115,7 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-600">info@DesiCrave.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-3 mr-4 text-white rounded-full bg-primary-600">
                     <Clock size={24} />
@@ -127,21 +127,23 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
+              {/* Map */}
               {/* Map */}
               <div className="mt-8 rounded-lg overflow-hidden h-64 bg-gray-200">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830921454!2d-74.11976395!3d40.69766755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903e411494d%3A0xb7e0d04c81fbad0a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1623825896367!5m2!1sen!2s" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24131787.126362424!2d68.1766456327027!3d20.59368405374996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff91a8c5a4b%3A0x236d3b818f23b73!2sIndia!5e0!3m2!1sen!2sin!4v1718275902811!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
                   loading="lazy"
-                  title="Restaurant Location"
+                  title="India Map"
                 ></iframe>
               </div>
+
             </div>
-            
+
             {/* Contact Form */}
             <div>
               {submitted ? (
@@ -160,7 +162,7 @@ const ContactPage: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="p-8 bg-primary-50 rounded-lg">
                   <h2 className="mb-6 text-3xl font-semibold">Send Us a Message</h2>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
                       Your Name
@@ -176,7 +178,7 @@ const ContactPage: React.FC = () => {
                     />
                     {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
                       Email Address
@@ -192,7 +194,7 @@ const ContactPage: React.FC = () => {
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                   </div>
-                  
+
                   <div className="mb-4">
                     <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-700">
                       Subject
@@ -207,7 +209,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Reservation Inquiry"
                     />
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">
                       Message
@@ -223,7 +225,7 @@ const ContactPage: React.FC = () => {
                     />
                     {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
                   </div>
-                  
+
                   <button type="submit" className="w-full flex items-center justify-center btn btn-primary">
                     <Send size={18} className="mr-2" />
                     Send Message
