@@ -14,7 +14,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 2,
-    src: 'https://images.pexels.com/photos/5410402/pexels-photo-5410402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://amritsruae.com/blog/wp-content/uploads/2022/01/paneer-tikka-masala-800x510.jpg',
     alt: 'Paneer Tikka Masala',
     category: 'food'
   },
@@ -32,7 +32,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 5,
-    src: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://www.gotable.com/blog/wp-content/uploads/Casual-table-setting.jpg',
     alt: 'Restaurant tables setup',
     category: 'restaurant'
   },
@@ -68,13 +68,13 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 11,
-    src: 'https://images.pexels.com/photos/3625372/pexels-photo-3625372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://www.cookclickndevour.com/wp-content/uploads/2016/05/mango-lassi-recipe-c.jpg',
     alt: 'Mango Lassi drink',
     category: 'food'
   },
   {
     id: 12,
-    src: 'https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://www.dawnvale.com/wp-content/uploads/news/1217/designing-private-dining-area.jpg',
     alt: 'Private dining area',
     category: 'restaurant'
   }
