@@ -20,13 +20,13 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 3,
-    src: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://interiordesign.net/wp-content/uploads/2024/04/InteriorDesign_March2024_Brave-New-World-11-1024x768.jpg',
     alt: 'Interior of the restaurant',
     category: 'restaurant'
   },
   {
     id: 4,
-    src: 'https://images.pexels.com/photos/7353380/pexels-photo-7353380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://ministryofcurry.com/wp-content/uploads/2024/06/chicken-biryani-5.jpg',
     alt: 'Chicken Biryani',
     category: 'food'
   },
@@ -56,7 +56,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 9,
-    src: 'https://images.pexels.com/photos/3298687/pexels-photo-3298687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    src: 'https://img.freepik.com/free-photo/young-happy-woman-talking-her-friend-while-bringing-food-lunch-dining-table_637285-3148.jpg?semt=ais_items_boosted&w=740',
     alt: 'Customers enjoying dinner',
     category: 'people'
   },
